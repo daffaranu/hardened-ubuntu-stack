@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daffa Tech Solutions | Production Linux Server Hardening</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-black">
+
+  <!-- Navbar -->
+  <nav class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50 px-6 py-4 flex justify-between items-center max-w-7xl mx-auto">
+    <div class="flex items-center gap-3">
+      <div class="h-3 w-3 rounded-full bg-emerald-500 animate-pulse"></div>
+      <span class="font-bold tracking-wider text-white">DAFFA TECH SOLUTIONS</span>
+    </div>
+    <div class="flex items-center gap-4 text-sm">
+      <a href="https://github.com/daffaranu/hardened-ubuntu-stack" target="_blank" class="hover:text-cyan-400 transition flex items-center gap-2">
+        <i class="fab fa-github"></i> <span class="hidden sm:inline">Portofolio</span>
+      </a>
+      <a href="https://wa.me/6282334573369?text=Halo%20Daffa,%20saya%20tertarik%20dengan%20jasa%20setup%20server" target="_blank" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 px-4 py-2 rounded-lg font-semibold transition">
+        Konsultasi
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="max-w-5xl mx-auto px-6 py-20 text-center">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-950/40 text-cyan-400 text-xs font-mono mb-6">
+      <span class="inline-block w-2 h-2 rounded-full bg-cyan-400"></span> Ubuntu 24.04 LTS Production Standard
+    </div>
+    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6">
+      Infrastruktur Server <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">Tahan Banting & Aman</span> untuk Aplikasi Web
+    </h1>
+    <p class="text-slate-400 text-lg sm:text-xl max-w-3xl mx-auto mb-10 leading-relaxed">
+      Layanan setup peladen, pengerasan sistem operasi, isolasi basis data, firewall berlapis, dan notifikasi pemulihan otomatis via Telegram. Siap produksi dalam 24–72 jam.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <a href="https://wa.me/6282334573369?text=Halo%20Daffa,%20saya%20ingin%20konsultasi%20setup%20server" target="_blank" class="w-full sm:w-auto bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-slate-950 font-bold px-8 py-3.5 rounded-xl shadow-lg shadow-cyan-500/20 transition">
+        Hubungi via WhatsApp
+      </a>
+      <a href="https://github.com/daffaranu/hardened-ubuntu-stack" target="_blank" class="w-full sm:w-auto border border-slate-700 hover:border-slate-500 bg-slate-900/50 px-8 py-3.5 rounded-xl font-medium transition flex items-center justify-center gap-2">
+        <i class="fab fa-github"></i> Lihat Kode Konfigurasi
+      </a>
+    </div>
+  </header>
+
+  <!-- Architecture / Highlights -->
+  <section class="max-w-6xl mx-auto px-6 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="p-6 rounded-2xl border border-slate-800 bg-slate-900/40">
+        <div class="text-cyan-400 text-2xl mb-4"><i class="fas fa-shield-halved"></i></div>
+        <h3 class="text-lg font-bold text-white mb-2">Hardened Perimeter</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          UFW Stateful Firewall mengunci semua port masuk kecuali HTTP/HTTPS dan SSH kustom. Fail2Ban aktif memblokir serangan brute-force secara otomatis.
+        </p>
+      </div>
+      <div class="p-6 rounded-2xl border border-slate-800 bg-slate-900/40">
+        <div class="text-emerald-400 text-2xl mb-4"><i class="fas fa-database"></i></div>
+        <h3 class="text-lg font-bold text-white mb-2">MariaDB Terisolasi</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Basis data dikunci ketat hanya pada loopback <code class="text-cyan-300">127.0.0.1:3306</code>. Port database tidak pernah terekspos ke jaringan publik internet.
+        </p>
+      </div>
+      <div class="p-6 rounded-2xl border border-slate-800 bg-slate-900/40">
+        <div class="text-purple-400 text-2xl mb-4"><i class="fas fa-robot"></i></div>
+        <h3 class="text-lg font-bold text-white mb-2">Self-Healing Watchdog</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Daemon pemantau otomatis me-restart Nginx/MariaDB bila terjadi kegagalan dan langsung mengirimkan peringatan insiden ke bot Telegram Anda secara real-time.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Table -->
+  <section class="max-w-6xl mx-auto px-6 py-16">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-white mb-3">Paket Layanan Deployment</h2>
+      <p class="text-slate-400">Biaya satu kali setup, bebas biaya lisensi, hak milik server 100% milik Anda.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Starter -->
+      <div class="p-8 rounded-2xl border border-slate-800 bg-slate-900/50 flex flex-col justify-between">
+        <div>
+          <h3 class="text-xl font-bold text-white mb-1">Starter Stack</h3>
+          <p class="text-slate-400 text-sm mb-6">Untuk landing page / personal web</p>
+          <div class="text-3xl font-extrabold text-white mb-6">Rp 750.000 <span class="text-sm font-normal text-slate-500">/ sekali</span></div>
+          <ul class="text-sm text-slate-300 space-y-3 mb-8">
+            <li><i class="fas fa-check text-cyan-400 mr-2"></i> Ubuntu 24.04 LTS OS Setup</li>
+            <li><i class="fas fa-check text-cyan-400 mr-2"></i> Single VirtualHost Nginx</li>
+            <li><i class="fas fa-check text-cyan-400 mr-2"></i> SSL/TLS Auto Let's Encrypt</li>
+            <li><i class="fas fa-check text-cyan-400 mr-2"></i> UFW Stateful Firewall</li>
+            <li><i class="fas fa-check text-cyan-400 mr-2"></i> Garansi 7 Hari Kalender</li>
+          </ul>
+        </div>
+        <a href="https://wa.me/6282334573369?text=Halo%20Daffa,%20saya%20ambil%20paket%20Starter%20Stack" class="w-full text-center py-3 rounded-xl border border-slate-700 hover:border-slate-500 text-white font-medium transition">
+          Pilih Starter
+        </a>
+      </div>
+
+      <!-- Production (Featured) -->
+      <div class="p-8 rounded-2xl border-2 border-cyan-500 bg-slate-900/90 relative flex flex-col justify-between shadow-2xl shadow-cyan-950">
+        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-cyan-500 text-slate-950 text-xs font-extrabold px-3 py-1 rounded-full tracking-wider uppercase">
+          Paling Populer
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-white mb-1">Production Hardened</h3>
+          <p class="text-slate-400 text-sm mb-6">Untuk aplikasi web bisnis / e-commerce</p>
+          <div class="text-3xl font-extrabold text-white mb-6">Rp 2.250.000 <span class="text-sm font-normal text-slate-500">/ sekali</span></div>
+          <ul class="text-sm text-slate-300 space-y-3 mb-8">
+            <li><i class="fas fa-check text-cyan-400 mr-2"></i> Multi-vHost Nginx + Security Headers</li>
+            <li><i class="fas fa-check text-cyan-400 mr-2"></i> MariaDB Hardened (Isolasi Loopback)</li>
+            <li><i class="fas fa-check text-cyan-400 mr-2"></i> Fail2Ban IPS (Anti Brute-Force)</li>
+            <li><i class="fas fa-check text-cyan-400 mr-2"></i> Auto-Backup Harian (Retensi 7 Hari)</li>
+            <li><i class="fas fa-check text-cyan-400 mr-2"></i> Watchdog Telegram & /api/health.json</li>
+            <li><i class="fas fa-check text-cyan-400 mr-2"></i> Garansi Purna-Jual 14 Hari</li>
+          </ul>
+        </div>
+        <a href="https://wa.me/6282334573369?text=Halo%20Daffa,%20saya%20ambil%20paket%20Production%20Hardened" class="w-full text-center py-3.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold transition">
+          Pesan Sekarang
+        </a>
+      </div>
+
+      <!-- Enterprise / Retainer -->
+      <div class="p-8 rounded-2xl border border-slate-800 bg-slate-900/50 flex flex-col justify-between">
+        <div>
+          <h3 class="text-xl font-bold text-white mb-1">Monthly Care (Retainer)</h3>
+          <p class="text-slate-400 text-sm mb-6">Pemeliharaan, backup audit, & SLA</p>
+          <div class="text-3xl font-extrabold text-white mb-6">Rp 1.000.000 <span class="text-sm font-normal text-slate-500">/ bulan</span></div>
+          <ul class="text-sm text-slate-300 space-y-3 mb-8">
+            <li><i class="fas fa-check text-cyan-400 mr-2"></i> SLA Response Time < 60 Menit</li>
+            <li><i class="fas fa-check text-cyan-400 mr-2"></i> Audit Backup Mingguan & Disaster Recovery</li>
+            <li><i class="fas fa-check text-cyan-400 mr-2"></i> Kernel Patching & Security Updates</li>
+            <li><i class="fas fa-check text-cyan-400 mr-2"></i> Unban IP & VirtualHost Maintenance</li>
+            <li><i class="fas fa-check text-cyan-400 mr-2"></i> Laporan Kesehatan Server Bulanan</li>
+          </ul>
+        </div>
+        <a href="https://wa.me/6282334573369?text=Halo%20Daffa,%20saya%20ingin%20konsultasi%20paket%20Monthly%20Care" class="w-full text-center py-3 rounded-xl border border-slate-700 hover:border-slate-500 text-white font-medium transition">
+          Hubungi Kami
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-10 text-center text-slate-500 text-sm">
+    <p class="mb-2">© 2026 Daffa Tech Solutions · Sidoarjo, Jawa Timur</p>
+    <p>Infrastructure & Linux Security Specialist · <a href="mailto:daffaranu24@gmail.com" class="text-cyan-400 hover:underline">daffaranu24@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>
