@@ -3,143 +3,266 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daffa Tech Solutions | Production-Grade Linux Web Stack</title>
+  <title>Daffa Tech Solutions | Mission-Critical Linux Web Infrastructure</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap');
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .font-mono-tech { font-family: 'JetBrains Mono', monospace; }
+    .tech-grid-pattern {
+      background-size: 30px 30px;
+      background-image: 
+        radial-gradient(circle, #cbd5e1 1px, transparent 1px);
+    }
   </style>
 </head>
-<body class="bg-[#f8f9fa] text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
+<body class="bg-[#f8fafc] text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
 
-  <!-- Header / Navbar ala Adobe -->
-  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between py-3">
-      <div class="flex items-center space-x-3">
-        <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white font-black text-sm shadow-sm">
-          D
+  <!-- Top Real-Time System Bar -->
+  <div class="bg-[#0f172a] text-slate-300 text-[11px] py-2 px-4 font-mono-tech border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+        </span>
+        <span class="text-slate-400 font-bold uppercase tracking-wider">SECURE NODE STATUS:</span>
+        <span class="text-emerald-400 font-bold tracking-tight" data-i18n="top_status">ONLINE • ZERO-TRUST PERIMETER ACTIVE</span>
+      </div>
+      <div class="hidden md:flex items-center gap-5 text-slate-400 text-[10px] tracking-wider">
+        <span class="flex items-center gap-1.5"><i class="fa-solid fa-lock text-cyan-400"></i> TLS 1.3 ENFORCED</span>
+        <span>•</span>
+        <span class="flex items-center gap-1.5"><i class="fa-solid fa-server text-indigo-400"></i> UBUNTU 24.04 LTS PRODUCTION</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center space-x-3.5">
+        <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-blue-700 via-indigo-600 to-cyan-500 flex items-center justify-center text-white shadow-lg shadow-blue-600/30">
+          <i class="fa-solid fa-server text-base"></i>
         </div>
-        <span class="font-extrabold tracking-tight text-slate-900 text-base md:text-lg">DAFFA TECH</span>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-black tracking-tight text-slate-900 text-base md:text-lg">DAFFA TECH</span>
+            <span class="px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 text-[10px] font-black tracking-wide font-mono-tech">v24.04</span>
+          </div>
+          <span class="text-[11px] text-slate-500 font-mono-tech tracking-wider uppercase flex items-center gap-1">
+            <i class="fa-solid fa-shield-halved text-emerald-600 text-[10px]"></i> Enterprise Infrastructure Lab
+          </span>
+        </div>
       </div>
 
       <div class="flex items-center space-x-3">
-        <!-- Switch Bahasa -->
-        <button id="langToggle" onclick="toggleLanguage()" class="text-xs font-semibold px-3 py-2 rounded-full border border-slate-300 bg-white hover:bg-slate-50 text-slate-700 transition flex items-center gap-1.5 shadow-sm">
+        <!-- Switch Bahasa & Kurs -->
+        <button id="langToggle" onclick="toggleLanguage()" class="text-xs font-bold px-3.5 py-2 rounded-full border border-slate-300 bg-white hover:bg-slate-100 text-slate-700 transition flex items-center gap-2 shadow-sm font-mono-tech">
           <i class="fa-solid fa-globe text-blue-600"></i>
           <span id="langLabel">ID / EN</span>
         </button>
 
-        <!-- Tombol Aksi Kapsul -->
-        <a href="https://github.com/daffaranu/hardened-ubuntu-stack" target="_blank" class="hidden sm:inline-flex items-center gap-1.5 text-xs md:text-sm font-semibold text-slate-700 hover:text-blue-600 px-4 py-2 transition">
+        <!-- CTA Action Buttons -->
+        <a href="https://github.com/daffaranu/hardened-ubuntu-stack" target="_blank" class="hidden sm:inline-flex items-center gap-2 text-xs md:text-sm font-bold text-slate-700 hover:text-blue-600 px-4 py-2 transition">
           <i class="fa-brands fa-github text-base"></i>
-          <span data-i18n="nav_github">GitHub</span>
+          <span data-i18n="nav_github">GitHub Code</span>
         </a>
-        <a href="https://wa.me/6282334573369?text=Hello%20Daffa%20Tech%20Solutions,%20I%20am%20interested%20in%20your%20Hardened%20Linux%20Server%20Stack." target="_blank" class="text-xs md:text-sm font-bold bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-full transition shadow-md shadow-blue-500/20" data-i18n="nav_consult">
-          Get Started
+        <a href="https://wa.me/6282334573369?text=Hello%20Daffa%20Tech%20Solutions,%20I%20am%20interested%20in%20your%20Hardened%20Linux%20Server%20Stack." target="_blank" class="text-xs md:text-sm font-extrabold bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-full transition shadow-lg shadow-blue-600/25 flex items-center gap-2" data-i18n="nav_consult">
+          <i class="fa-solid fa-key text-xs"></i>
+          <span>Get Started</span>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section ala Adobe (Spacious & Clean) -->
-  <section class="max-w-5xl mx-auto px-4 sm:px-6 pt-16 pb-16 text-center">
-    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-xs font-bold mb-6">
-      <span class="w-2 h-2 rounded-full bg-blue-600"></span>
-      <span data-i18n="badge_tech">Ubuntu 24.04 LTS Architecture</span>
-    </div>
+  <!-- Hero Section with Modern Tech Grid -->
+  <section class="tech-grid-pattern border-b border-slate-200/90 pt-16 pb-20 relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center relative z-10">
+      
+      <!-- Modern Security Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-300 shadow-sm text-slate-700 text-xs font-bold mb-6 font-mono-tech">
+        <i class="fa-solid fa-lock text-cyan-600"></i>
+        <span data-i18n="badge_tech">HARDENED STACK ARCHITECTURE // CIS BENCHMARK</span>
+      </div>
 
-    <h1 class="text-4xl sm:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.12] mb-6">
-      <span data-i18n="hero_title_1">High-performance servers,</span><br>
-      <span class="text-blue-600" data-i18n="hero_title_2">hardened for production.</span>
-    </h1>
+      <h1 class="text-4xl sm:text-6xl font-black text-slate-900 tracking-tight leading-[1.12] mb-6">
+        <span data-i18n="hero_title_1">Mission-Critical Linux Servers,</span><br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-indigo-600 to-cyan-500" data-i18n="hero_title_2">Hardened for Production.</span>
+      </h1>
 
-    <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed font-normal" data-i18n="hero_desc">
-      Production operating system hardening, isolated MariaDB database, zero-trust UFW firewall, and self-healing Telegram monitoring bot. Ready in 24–72 hours.
-    </p>
+      <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto mb-8 leading-relaxed font-normal" data-i18n="hero_desc">
+        Zero-trust operating system security, isolated MariaDB databases, stateful UFW firewalls, and self-healing Telegram monitoring telemetry. Ready in 24–72 hours.
+      </p>
 
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
-      <a href="https://wa.me/6282334573369?text=Hello%20Daffa%20Tech%20Solutions,%20I%20am%20interested%20in%20your%20Hardened%20Linux%20Server%20Stack." target="_blank" class="w-full sm:w-auto px-8 py-3.5 rounded-full font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-600/25 transition text-sm flex items-center justify-center gap-2" data-i18n="cta_contact">
-        <i class="fa-brands fa-whatsapp text-lg"></i>
-        <span>Chat on WhatsApp</span>
-      </a>
-      <a href="https://github.com/daffaranu/hardened-ubuntu-stack" target="_blank" class="w-full sm:w-auto px-8 py-3.5 rounded-full font-bold border border-slate-300 bg-white hover:bg-slate-50 text-slate-800 transition text-sm flex items-center justify-center gap-2 shadow-sm" data-i18n="cta_github">
-        <i class="fa-brands fa-github text-lg"></i>
-        <span>View Source Code</span>
-      </a>
+      <!-- Terminal Status Simulation Box -->
+      <div class="max-w-xl mx-auto mb-10 text-left bg-slate-900 rounded-2xl p-4 shadow-2xl border border-slate-800 text-xs font-mono-tech text-slate-300">
+        <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-800">
+          <div class="flex items-center space-x-2">
+            <span class="w-3 h-3 rounded-full bg-rose-500 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
+          </div>
+          <span class="text-[10px] text-slate-500 uppercase tracking-widest"><i class="fa-solid fa-terminal mr-1"></i> production-guard.sh</span>
+        </div>
+        <p class="text-slate-400">$ <span class="text-cyan-400">systemctl status</span> security-shield</p>
+        <p class="text-emerald-400 mt-1">● active (running) [MariaDB: 127.0.0.1:3306 ONLY | UFW: DENY INCOMING]</p>
+        <p class="text-slate-400 mt-1">$ <span class="text-cyan-400">tls-audit</span> --strict</p>
+        <p class="text-blue-400 mt-1">&gt; TLSv1.3 modern profile verified (SSL Grade A+)</p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5">
+        <a href="https://wa.me/6282334573369?text=Hello%20Daffa%20Tech%20Solutions,%20I%20am%20interested%20in%20your%20Hardened%20Linux%20Server%20Stack." target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-full font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-xl shadow-blue-600/30 transition text-sm flex items-center justify-center gap-2.5" data-i18n="cta_contact">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>Direct WhatsApp Consultation</span>
+        </a>
+        <a href="https://github.com/daffaranu/hardened-ubuntu-stack" target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-full font-bold border border-slate-300 bg-white hover:bg-slate-50 text-slate-800 transition text-sm flex items-center justify-center gap-2.5 shadow-sm" data-i18n="cta_github">
+          <i class="fa-brands fa-github text-lg"></i>
+          <span>Inspect Architecture & Scripts</span>
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- Feature Grid ala Adobe (Card Style) -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+  <!-- Mission-Critical Metrics Counter (GE Aerospace Style) -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-9 relative z-20">
+    <div class="bg-[#0f172a] rounded-3xl p-6 sm:p-8 text-white shadow-2xl border border-slate-800 grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-slate-800">
+      
+      <div class="pt-4 md:pt-0">
+        <div class="text-3xl sm:text-4xl font-black text-cyan-400 font-mono-tech tracking-tight flex items-center justify-center gap-1.5">
+          <i class="fa-solid fa-server text-xl text-slate-500"></i>
+          <span>99.9%</span>
+        </div>
+        <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mt-1.5" data-i18n="metric_1">Uptime Target Baseline</div>
+      </div>
+
+      <div class="pt-4 md:pt-0">
+        <div class="text-3xl sm:text-4xl font-black text-white font-mono-tech tracking-tight flex items-center justify-center gap-1.5">
+          <i class="fa-solid fa-lock text-xl text-emerald-400"></i>
+          <span>0</span>
+        </div>
+        <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mt-1.5" data-i18n="metric_2">Exposed Database Ports</div>
+      </div>
+
+      <div class="pt-4 md:pt-0">
+        <div class="text-3xl sm:text-4xl font-black text-blue-400 font-mono-tech tracking-tight flex items-center justify-center gap-1.5">
+          <i class="fa-solid fa-key text-xl text-slate-500"></i>
+          <span>TLS 1.3</span>
+        </div>
+        <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mt-1.5" data-i18n="metric_3">Modern Web Encryption</div>
+      </div>
+
+      <div class="pt-4 md:pt-0">
+        <div class="text-3xl sm:text-4xl font-black text-emerald-400 font-mono-tech tracking-tight flex items-center justify-center gap-1.5">
+          <i class="fa-brands fa-telegram text-xl text-cyan-400"></i>
+          <span>&lt; 60s</span>
+        </div>
+        <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mt-1.5" data-i18n="metric_4">Incident Telemetry Bot</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Hardened Architectural Pillars -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+      <div>
+        <div class="flex items-center gap-2 text-xs font-mono-tech uppercase font-bold text-blue-600 tracking-wider">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>LAYERED DEFENSE SPECIFICATIONS</span>
+        </div>
+        <h2 class="text-3xl font-extrabold text-slate-900 mt-1" data-i18n="pillars_title">Hardened Architectural Framework</h2>
+      </div>
+      <p class="text-slate-500 text-sm max-w-md mt-2 md:mt-0" data-i18n="pillars_subtitle">
+        Every layer is configured through immutable bash scripts and industrial zero-trust security checklists.
+      </p>
+    </div>
+
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       
-      <!-- Card 1 -->
-      <div class="bg-white p-8 rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-md transition">
-        <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-6 text-xl">
-          <i class="fa-solid fa-shield-halved"></i>
+      <!-- Pillar 1: Zero-Trust Security -->
+      <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:border-blue-500 hover:shadow-xl transition relative group">
+        <div class="flex items-center justify-between mb-6">
+          <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl group-hover:scale-110 transition">
+            <i class="fa-solid fa-lock"></i>
+          </div>
+          <span class="text-[10px] font-mono-tech font-bold text-blue-600 px-3 py-1 bg-blue-50 rounded-full border border-blue-100">LAYER 01 // SECURITY</span>
         </div>
-        <h3 class="text-xl font-bold text-slate-900 mb-2" data-i18n="card_1_title">Zero-Trust Hardening</h3>
-        <p class="text-slate-600 text-sm leading-relaxed" data-i18n="card_1_desc">Non-root sudo enforcement, UFW strict packet filtering, Fail2Ban brute-force intrusion defense, and MariaDB bound strictly to 127.0.0.1.</p>
+        <h3 class="text-xl font-bold text-slate-900 mb-2" data-i18n="card_1_title">Zero-Trust OS Hardening</h3>
+        <p class="text-slate-600 text-sm leading-relaxed" data-i18n="card_1_desc">
+          Enforced non-root sudo accounts, strict UFW packet rules, Fail2Ban brute-force defense, and MariaDB isolated strictly to 127.0.0.1.
+        </p>
       </div>
 
-      <!-- Card 2 -->
-      <div class="bg-white p-8 rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-md transition">
-        <div class="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-6 text-xl">
-          <i class="fa-solid fa-bolt"></i>
+      <!-- Pillar 2: High Concurrency Engine -->
+      <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:border-indigo-500 hover:shadow-xl transition relative group">
+        <div class="flex items-center justify-between mb-6">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl group-hover:scale-110 transition">
+            <i class="fa-solid fa-server"></i>
+          </div>
+          <span class="text-[10px] font-mono-tech font-bold text-indigo-600 px-3 py-1 bg-indigo-50 rounded-full border border-indigo-100">LAYER 02 // PERFORMANCE</span>
         </div>
-        <h3 class="text-xl font-bold text-slate-900 mb-2" data-i18n="card_2_title">High-Speed Nginx</h3>
-        <p class="text-slate-600 text-sm leading-relaxed" data-i18n="card_2_desc">Optimized worker connections, automated TLS v1.3 with Let's Encrypt, security headers (HSTS, CSP), and integrated JSON health check endpoint.</p>
+        <h3 class="text-xl font-bold text-slate-900 mb-2" data-i18n="card_2_title">High-Concurrency Nginx</h3>
+        <p class="text-slate-600 text-sm leading-relaxed" data-i18n="card_2_desc">
+          Optimized worker connections, automated TLS v1.3 Let's Encrypt certificates, HSTS security headers, and JSON health check endpoints.
+        </p>
       </div>
 
-      <!-- Card 3 -->
-      <div class="bg-white p-8 rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-md transition">
-        <div class="w-12 h-12 rounded-2xl bg-cyan-50 text-cyan-600 flex items-center justify-center mb-6 text-xl">
-          <i class="fa-solid fa-robot"></i>
+      <!-- Pillar 3: Telemetry & Recovery -->
+      <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:border-cyan-500 hover:shadow-xl transition relative group">
+        <div class="flex items-center justify-between mb-6">
+          <div class="w-12 h-12 rounded-2xl bg-cyan-50 text-cyan-600 flex items-center justify-center text-xl group-hover:scale-110 transition">
+            <i class="fa-solid fa-key"></i>
+          </div>
+          <span class="text-[10px] font-mono-tech font-bold text-cyan-600 px-3 py-1 bg-cyan-50 rounded-full border border-cyan-100">LAYER 03 // DISASTER RECOVERY</span>
         </div>
-        <h3 class="text-xl font-bold text-slate-900 mb-2" data-i18n="card_3_title">Automated Watchdog</h3>
-        <p class="text-slate-600 text-sm leading-relaxed" data-i18n="card_3_desc">Cron-driven daily encrypted backups, automated service recovery, and instant incident telemetry alerts delivered straight to Telegram.</p>
+        <h3 class="text-xl font-bold text-slate-900 mb-2" data-i18n="card_3_title">Automated Watchdog & Backup</h3>
+        <p class="text-slate-600 text-sm leading-relaxed" data-i18n="card_3_desc">
+          Cron-automated encrypted backups, database dumps, service auto-recovery, and real-time failure alerts sent directly to Telegram.
+        </p>
       </div>
+
     </div>
   </section>
 
-  <!-- Pricing Cards ala Adobe Creative Cloud Pricing -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <!-- Pricing Plans -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
     <div class="text-center max-w-2xl mx-auto mb-12">
-      <h2 class="text-3xl font-extrabold text-slate-900 mb-3" data-i18n="pricing_title">Plans & Pricing</h2>
-      <p class="text-slate-600 text-sm" data-i18n="pricing_desc">Choose the right deployment plan for your business or client apps.</p>
+      <span class="text-xs font-mono-tech uppercase font-bold text-blue-600 tracking-wider">TIERED PACKAGES</span>
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-1 mb-3" data-i18n="pricing_title">Transparent Deployment Plans</h2>
+      <p class="text-slate-600 text-sm" data-i18n="pricing_desc">Select the right deployment architecture for your application scale.</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
       <!-- Tier 1 -->
       <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
         <div>
-          <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Basic</span>
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-400 font-mono-tech">TIER 01</span>
           <h4 class="text-2xl font-extrabold text-slate-900 mt-1 mb-2" data-i18n="t1_name">Starter Stack</h4>
           <p class="text-xs text-slate-500 mb-6" data-i18n="t1_desc">Basic VPS setup for single websites or landing pages.</p>
           <div class="mb-6">
-            <span class="text-4xl font-black text-slate-900" id="price_t1">$45</span>
+            <span class="text-4xl font-black text-slate-900 font-mono-tech" id="price_t1">$45</span>
             <span class="text-xs text-slate-500" data-i18n="price_onetime"> / one-time</span>
           </div>
           <ul class="text-xs text-slate-600 space-y-3.5 mb-8">
             <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-blue-600 text-sm"></i> Ubuntu 24.04 LTS Setup</li>
-            <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-blue-600 text-sm"></i> Nginx Web Server + SSL Let's Encrypt</li>
+            <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-blue-600 text-sm"></i> Nginx Web Server + Let's Encrypt SSL</li>
             <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-blue-600 text-sm"></i> UFW Firewall & SSH Hardening</li>
             <li class="flex items-center gap-2.5 text-slate-400"><i class="fa-solid fa-circle-xmark text-slate-300 text-sm"></i> Database & Telegram Watchdog</li>
           </ul>
         </div>
-        <a href="https://wa.me/6282334573369?text=Hello,%20I%20want%20to%20order%20the%20Starter%20Stack." target="_blank" class="w-full text-center py-3 rounded-full border border-slate-300 hover:bg-slate-50 text-xs font-bold text-slate-800 transition" data-i18n="btn_choose">Buy Now</a>
+        <a href="https://wa.me/6282334573369?text=Hello,%20I%20want%20to%20order%20the%20Starter%20Stack." target="_blank" class="w-full text-center py-3.5 rounded-full border border-slate-300 hover:bg-slate-50 text-xs font-bold text-slate-800 transition" data-i18n="btn_choose">Select Plan</a>
       </div>
 
-      <!-- Tier 2 (Highlighted) -->
+      <!-- Tier 2 (Featured) -->
       <div class="bg-white p-8 rounded-3xl border-2 border-blue-600 shadow-xl shadow-blue-500/10 flex flex-col justify-between relative">
-        <span class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-blue-600 text-white text-[10px] font-black uppercase tracking-wider shadow-sm" data-i18n="badge_popular">Best Value</span>
+        <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-blue-600 text-white text-[10px] font-black uppercase tracking-wider shadow-sm font-mono-tech" data-i18n="badge_popular">RECOMMENDED</span>
         <div>
-          <span class="text-xs font-bold uppercase tracking-wider text-blue-600">Recommended</span>
+          <span class="text-xs font-bold uppercase tracking-wider text-blue-600 font-mono-tech">TIER 02</span>
           <h4 class="text-2xl font-extrabold text-slate-900 mt-1 mb-2" data-i18n="t2_name">Production Hardened</h4>
           <p class="text-xs text-slate-500 mb-6" data-i18n="t2_desc">Full zero-trust setup for high-traffic apps & e-commerce.</p>
           <div class="mb-6">
-            <span class="text-4xl font-black text-blue-600" id="price_t2">$120</span>
+            <span class="text-4xl font-black text-blue-600 font-mono-tech" id="price_t2">$120</span>
             <span class="text-xs text-slate-500" data-i18n="price_onetime"> / one-time</span>
           </div>
           <ul class="text-xs text-slate-700 space-y-3.5 mb-8">
@@ -150,17 +273,17 @@
             <li class="flex items-center gap-2.5 font-medium"><i class="fa-solid fa-circle-check text-blue-600 text-sm"></i> Handover Documentation (BAST)</li>
           </ul>
         </div>
-        <a href="https://wa.me/6282334573369?text=Hello,%20I%20want%20to%20order%20the%20Production%20Hardened%20Stack." target="_blank" class="w-full text-center py-3 rounded-full bg-blue-600 hover:bg-blue-700 text-xs font-bold text-white transition shadow-md shadow-blue-600/20" data-i18n="btn_choose">Buy Now</a>
+        <a href="https://wa.me/6282334573369?text=Hello,%20I%20want%20to%20order%20the%20Production%20Hardened%20Stack." target="_blank" class="w-full text-center py-3.5 rounded-full bg-blue-600 hover:bg-blue-700 text-xs font-bold text-white transition shadow-lg shadow-blue-600/25" data-i18n="btn_choose">Select Plan</a>
       </div>
 
       <!-- Tier 3 -->
       <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
         <div>
-          <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Enterprise</span>
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-400 font-mono-tech">TIER 03</span>
           <h4 class="text-2xl font-extrabold text-slate-900 mt-1 mb-2" data-i18n="t3_name">Enterprise Retainer</h4>
           <p class="text-xs text-slate-500 mb-6" data-i18n="t3_desc">Continuous maintenance, Telegram bot, and priority SLA.</p>
           <div class="mb-6">
-            <span class="text-4xl font-black text-slate-900" id="price_t3">$220</span>
+            <span class="text-4xl font-black text-slate-900 font-mono-tech" id="price_t3">$220</span>
             <span class="text-xs text-slate-500" data-i18n="price_monthly"> / setup + 1mo</span>
           </div>
           <ul class="text-xs text-slate-600 space-y-3.5 mb-8">
@@ -171,41 +294,64 @@
             <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-blue-600 text-sm"></i> 4-Hour Emergency Response SLA</li>
           </ul>
         </div>
-        <a href="https://wa.me/6282334573369?text=Hello,%20I%20want%20to%20order%20the%20Enterprise%20Retainer." target="_blank" class="w-full text-center py-3 rounded-full border border-slate-300 hover:bg-slate-50 text-xs font-bold text-slate-800 transition" data-i18n="btn_choose">Buy Now</a>
+        <a href="https://wa.me/6282334573369?text=Hello,%20I%20want%20to%20order%20the%20Enterprise%20Retainer." target="_blank" class="w-full text-center py-3.5 rounded-full border border-slate-300 hover:bg-slate-50 text-xs font-bold text-slate-800 transition" data-i18n="btn_choose">Select Plan</a>
       </div>
     </div>
   </section>
 
-  <!-- Footer Minimalis -->
+  <!-- Technical Verification Footnote -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+    <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+      <div class="flex items-center gap-3.5">
+        <div class="w-9 h-9 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-lg">
+          <i class="fa-solid fa-certificate"></i>
+        </div>
+        <span class="text-slate-600 font-medium">Production Security Standard: All configurations adhere strictly to CIS Ubuntu 24.04 LTS benchmark standards.</span>
+      </div>
+      <a href="https://github.com/daffaranu/hardened-ubuntu-stack" target="_blank" class="font-bold text-blue-600 hover:text-blue-800 whitespace-nowrap flex items-center gap-1.5 font-mono-tech">
+        <span>Verify Code Base</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="border-t border-slate-200 bg-white py-12 text-center text-xs text-slate-500">
     <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
       <p>© 2026 Daffa Tech Solutions. Engineered by Daffa Ranu Yoga Pratama.</p>
-      <p>Ubuntu 24.04 LTS Production Hardened Stack • Sidoarjo, Indonesia</p>
+      <p class="font-mono-tech">Mission-Critical Architecture • Sidoarjo, Indonesia</p>
     </div>
   </footer>
 
-  <!-- Script Logika Bilingual -->
+  <!-- Bilingual Logic Script -->
   <script>
     let currentLang = 'en';
 
     const translations = {
       en: {
-        nav_github: "GitHub",
+        top_status: "ONLINE • ZERO-TRUST PERIMETER ACTIVE",
+        nav_github: "GitHub Code",
         nav_consult: "Get Started",
-        badge_tech: "Ubuntu 24.04 LTS Architecture",
-        hero_title_1: "High-performance servers,",
-        hero_title_2: "hardened for production.",
-        hero_desc: "Production operating system hardening, isolated MariaDB database, zero-trust UFW firewall, and self-healing Telegram monitoring bot. Ready in 24–72 hours.",
-        cta_contact: "Chat on WhatsApp",
-        cta_github: "View Source Code",
-        card_1_title: "Zero-Trust Hardening",
-        card_1_desc: "Non-root sudo enforcement, UFW strict packet filtering, Fail2Ban brute-force intrusion defense, and MariaDB bound strictly to 127.0.0.1.",
-        card_2_title: "High-Speed Nginx",
-        card_2_desc: "Optimized worker connections, automated TLS v1.3 with Let's Encrypt, security headers (HSTS, CSP), and integrated JSON health check endpoint.",
-        card_3_title: "Automated Watchdog",
-        card_3_desc: "Cron-driven daily encrypted backups, automated service recovery, and instant incident telemetry alerts delivered straight to Telegram.",
-        pricing_title: "Plans & Pricing",
-        pricing_desc: "Choose the right deployment plan for your business or client apps.",
+        badge_tech: "HARDENED STACK ARCHITECTURE // CIS BENCHMARK",
+        hero_title_1: "Mission-Critical Linux Servers,",
+        hero_title_2: "Hardened for Production.",
+        hero_desc: "Zero-trust operating system security, isolated MariaDB databases, stateful UFW firewalls, and self-healing Telegram monitoring telemetry. Ready in 24–72 hours.",
+        cta_contact: "Direct WhatsApp Consultation",
+        cta_github: "Inspect Architecture & Scripts",
+        metric_1: "Uptime Target Baseline",
+        metric_2: "Exposed Database Ports",
+        metric_3: "Modern Web Encryption",
+        metric_4: "Incident Telemetry Bot",
+        pillars_title: "Hardened Architectural Framework",
+        pillars_subtitle: "Every layer is configured through immutable bash scripts and industrial zero-trust security checklists.",
+        card_1_title: "Zero-Trust OS Hardening",
+        card_1_desc: "Enforced non-root sudo accounts, strict UFW packet rules, Fail2Ban brute-force defense, and MariaDB isolated strictly to 127.0.0.1.",
+        card_2_title: "High-Concurrency Nginx",
+        card_2_desc: "Optimized worker connections, automated TLS v1.3 Let's Encrypt certificates, HSTS security headers, and JSON health check endpoints.",
+        card_3_title: "Automated Watchdog & Backup",
+        card_3_desc: "Cron-automated encrypted backups, database dumps, service auto-recovery, and real-time failure alerts sent directly to Telegram.",
+        pricing_title: "Transparent Deployment Plans",
+        pricing_desc: "Select the right deployment architecture for your application scale.",
         t1_name: "Starter Stack",
         t1_desc: "Basic VPS setup for single websites or landing pages.",
         t2_name: "Production Hardened",
@@ -214,36 +360,43 @@
         t3_desc: "Continuous maintenance, Telegram bot, and priority SLA.",
         price_onetime: " / one-time",
         price_monthly: " / setup + 1mo",
-        badge_popular: "Best Value",
-        btn_choose: "Buy Now"
+        badge_popular: "RECOMMENDED",
+        btn_choose: "Select Plan"
       },
       id: {
-        nav_github: "GitHub",
+        top_status: "ONLINE • PERIMETER ZERO-TRUST AKTIF",
+        nav_github: "Kode GitHub",
         nav_consult: "Mulai Sekarang",
-        badge_tech: "Arsitektur Ubuntu 24.04 LTS",
-        hero_title_1: "Infrastruktur server andal,",
-        hero_title_2: "terlindungi untuk produksi.",
-        hero_desc: "Pengerasan keamanan sistem operasi, basis data MariaDB terisolasi, firewall zero-trust UFW, dan bot monitoring Telegram mandiri. Siap dalam 24–72 jam.",
-        cta_contact: "Hubungi via WhatsApp",
-        cta_github: "Lihat Kode Sumber",
+        badge_tech: "ARSITEKTUR SERVER PRODUKSI // CIS BENCHMARK",
+        hero_title_1: "Peladen Linux Kritis,",
+        hero_title_2: "Dirancang untuk Lingkungan Produksi.",
+        hero_desc: "Pengerasan OS standar zero-trust, isolasi database MariaDB, firewall UFW berlapis, dan bot pemantauan insiden via Telegram. Siap dalam 24–72 jam.",
+        cta_contact: "Konsultasi Langsung via WhatsApp",
+        cta_github: "Audit Kode & Skrip Arsitektur",
+        metric_1: "Target Uptime Standar",
+        metric_2: "Port Database Terbuka Publik",
+        metric_3: "Enkripsi Web Modern",
+        metric_4: "Respons Bot Telemetri",
+        pillars_title: "Kerangka Kerja Arsitektur Keamanan",
+        pillars_subtitle: "Setiap lapisan dipasang melalui skrip otomasi bash dan checklist keamanan standar industri.",
         card_1_title: "Pengerasan Zero-Trust",
-        card_1_desc: "Akses non-root sudo, firewall UFW ketat, proteksi brute-force Fail2Ban, dan MariaDB terisolasi hanya diakses lokal 127.0.0.1.",
-        card_2_title: "Kecepatan Tinggi Nginx",
-        card_2_desc: "Koneksi worker teroptimasi, TLS v1.3 otomatis dengan Let's Encrypt, header keamanan web, dan endpoint telemetri JSON.",
-        card_3_title: "Pemulihan & Watchdog",
-        card_3_desc: "Backup harian terenkripsi via Cron, pemulihan layanan mandiri, dan notifikasi insiden langsung terkirim ke Telegram Anda.",
-        pricing_title: "Pilihan Paket & Harga",
-        pricing_desc: "Pilih paket arsitektur yang sesuai dengan skala bisnis atau aplikasi klien Anda.",
+        card_1_desc: "Akses non-root sudo ketat, filter paket UFW, penangkal brute-force Fail2Ban, dan MariaDB terisolasi 100% pada localhost.",
+        card_2_title: "Nginx Konkurensi Tinggi",
+        card_2_desc: "Optimasi worker connection, sertifikat otomatis TLS v1.3 Let's Encrypt, security header HSTS, dan endpoint status JSON.",
+        card_3_title: "Pemulihan & Backup Otomatis",
+        card_3_desc: "Otomasi Cron backup terenkripsi, pemulihan mandiri service saat crash, dan laporan telemetri langsung ke Telegram.",
+        pricing_title: "Transparansi Biaya & Paket",
+        pricing_desc: "Pilih skema infrastruktur yang sesuai dengan kebutuhan dan skala beban aplikasi Anda.",
         t1_name: "Paket Starter",
         t1_desc: "Setup dasar VPS untuk satu website profil atau landing page.",
         t2_name: "Production Hardened",
         t2_desc: "Arsitektur zero-trust lengkap untuk aplikasi web trafik tinggi.",
-        t3_name: "Enterprise & SLA",
+        t3_name: "Enterprise Retainer",
         t3_desc: "Paket lengkap dengan pemeliharaan rutin, bot Telegram & prioritas SLA.",
         price_onetime: " / satu kali",
         price_monthly: " / setup + 1 bln",
-        badge_popular: "Paling Diminati",
-        btn_choose: "Pesan Sekarang"
+        badge_popular: "PALING DIMINATI",
+        btn_choose: "Pilih Paket"
       }
     };
 
